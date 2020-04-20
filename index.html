@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sean's Calculator</title>
+    <style>
+        .container {
+    display: inline-grid;
+    grid-template-columns: repeat(12, auto);
+    grid-template-rows: repeat(15, auto);
+    grid-gap: 5px
+}
+    .add {
+        grid-row: 1 / span 3;
+        grid-column: 1 / span 3;
+    }
+    
+    .subtract {
+        grid-row: 1 / span 3;
+        grid-column: 4 / span 3;
+    }
+
+    .multiply {
+        grid-row: 1 / span 3;
+        grid-column: 7 / span 3
+    }
+
+    .divide {
+        grid-row: 1 / span 3;
+        grid-column: 10 / span 3;
+    }
+
+    .n1 {
+        grid-row: 4 / span 3;
+        grid-column: 1 / span 4;
+    }
+    .n2 {
+        grid-row: 4 / span 3;
+        grid-column: 5 / span 4;
+    }
+    .n3 {
+        grid-row: 4 / span 3;
+        grid-column: 9 / span 4;
+    }
+
+    .n4 {
+        grid-row: 7 / span 3;
+        grid-column: 1 / span 4;
+    }
+
+    .n5 {
+        grid-row: 7 / span 3;
+        grid-column: 5 / span 4;
+    }
+
+    .n6 {
+        grid-row: 7 / span 3;
+        grid-column: 9 / span 4;
+    }
+
+    .n7 {
+        grid-row: 10 / span 3;
+        grid-column: 1 / span 4;
+    }
+    .n8 {
+        grid-row: 10 / span 3;
+        grid-column: 5 / span 4;
+    }
+    
+    .n9 {
+        grid-row: 10 / span 3;
+        grid-column: 9 / span 4;
+    }
+    .clear {
+        grid-row: 13 / span 3;
+        grid-column: 1 / span 4;
+    }
+    .n0 {
+        grid-row: 13 / span 3;
+        grid-column: 5 / span 4;
+    }
+    .equals {
+        grid-row: 13 / span 3;
+        grid-column: 9 / span 4;
+    }
+
+    .operator {
+        font-size: 22px;
+    }
+    .number {
+        font-size: 30px;
+    }
+    .clear {
+        font-size: 30px;
+    }
+    .equals {
+        font-size: 30px;
+    }
+    .display {
+        font-size: 30px;
+    }
+    
+
+
+    </style>
+</head>
+<body>
+    <div class='display'><h3 id="display">0</h3></div>
+    <div class="container">
+        <div class='operator add'><button class='add operator' id='add'>+</button></div>
+        <div class='operator subtract'><button class='subtract operator' id='subtract' >-</button></div>
+        <div class='operator multiply'><button class='multiply operator' id='multiply' >x</button></div>
+        <div class='operator divide'><button class='divide operator' id='divide' >/</button></div>
+        <div class='number n1'><button class='number n1' id='n1' >1</button></div>
+        <div class='number n2'><button class='number n2' id='n2' >2</button></div>
+        <div class='number n3'><button class='number n3' id='n3' >3</button></div>
+        <div class='number n4'><button class='number n4' id='n4' >4</button></div>
+        <div class='number n5'><button class='number n5' id='n5' >5</button></div>
+        <div class='number n6'><button class='number n6' id='n6' >6</button></div>
+        <div class='number n7'><button class='number n7' id='n7' >7</button></div>
+        <div class='number n8'><button class='number n8' id='n8' >8</button></div>
+        <div class='number n9'><button class='number n9' id='n9' >9</button></div>
+        <div class='number n0'><button class='number n0' id='n0' >0</button></div>
+        <div class='equals'><button class='equals' id='equalBtn' >=</button></div>
+        <div class='clear'><button class='clear' id='clearBtn' >C</button></div>
+    </div' >
+
+    <script> //Need to get display to work.
+
+        var firstString = ''
+        const display = document.querySelector("#display");
+
+        function add1() {
+            firstString += '1';
+            display.innerHTML = firstString;
+            return firstString;
+            
+        }
+        const n1 = document.querySelector("#n1");
+        n1.addEventListener("click", add1);
+
+        function add2() {
+            firstString += '2';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n2 = document.querySelector("#n2");
+        n2.addEventListener("click", add2);
+
+        function add3() {
+            firstString += '3';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n3 = document.querySelector("#n3");
+        n3.addEventListener("click", add3);
+
+        function add4() {
+            firstString += '4';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n4 = document.querySelector("#n4");
+        n4.addEventListener("click", add4);
+
+        function add5() {
+            firstString += '5';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n5 = document.querySelector("#n5");
+        n5.addEventListener("click", add5);
+
+        function add6() {
+            firstString += '6';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n6 = document.querySelector("#n6");
+        n6.addEventListener("click", add6);
+
+        function add7() {
+            firstString += '7';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n7 = document.querySelector("#n7");
+        n7.addEventListener("click", add7);
+
+        function add8() {
+            firstString += '8';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n8 = document.querySelector("#n8");
+        n8.addEventListener("click", add8);
+
+        function add9() {
+            firstString+= '9';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n9 = document.querySelector("#n9");
+        n9.addEventListener("click", add9);
+
+        function add0() {
+            firstString += '0';
+            display.innerHTML = firstString;
+            return firstString;
+        }
+        const n0 = document.querySelector("#n0");
+        n0.addEventListener("click", add0);
+
+// NEED TO FIX OPERATE FUNCTION. Inputs are concatenating but not evaluating
+    function operate(input) {
+        var firstArray = input.toString().split(" ");
+        console.log(firstArray);
+        var a = firstArray[0];
+        var op = firstArray[1];
+        var b = firstArray[2];
+        if (op.toString() == '+') {
+            sum = (Number(a) + Number(b));
+        } else if (op.toString() == '-') {
+            sum = (Number(a) - Number(b));
+        } else if (op.toString() == 'x') {
+            sum = (Number(a) * Number(b));
+        } else if (op.toString() == '/') {
+            if (Number(b) == 0) {
+                alert("Don't divide by 0...");
+                sum = 0;
+            } else {
+            sum = (Number(a) / Number(b));
+            }
+        } else {
+            alert('Error....')
+        }
+        sum = Math.round((sum + Number.EPSILON) * 10000) / 10000;
+        //input = sum;
+        firstString = sum;
+        display.textContent = sum;
+        return firstString;
+    }
+    
+
+    function checkForOperator(first) {
+        if (first.toString().includes(' + ') || first.toString().includes(' - ') || first.toString().includes(' x ') || first.toString().includes(' / ')) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function equalsBtn() {
+        operate(firstString);
+    }
+
+    const equalBtn = document.querySelector("#equalBtn");
+    equalBtn.addEventListener("click", equalsBtn);
+
+  function addition() {
+      if (checkForOperator(firstString)) {
+      operate(firstString);
+      firstString += " + ";
+      display.innerHTML = firstString;
+      return firstString;
+  } else {
+      firstString += " + ";
+      display.innerHTML = firstString;
+      return firstString;
+  }}
+  const add = document.querySelector("#add");
+  add.addEventListener("click", addition);
+
+  function subtraction() {
+      if (checkForOperator(firstString)) {
+          operate(firstString);
+          firstString += " - ";
+          display.innerHTML = firstString;
+          return firstString;
+      } else {
+          firstString += " - ";
+          display.innerHTML = firstString;
+          return firstString;
+      }
+  }
+  const subtract = document.querySelector("#subtract");
+  subtract.addEventListener("click", subtraction);
+
+  function multiplication() {
+      if (checkForOperator(firstString)) {
+          operate(firstString);
+          firstString += " x ";
+          display.innerHTML = firstString;
+          return firstString;
+      } else {
+          firstString += " x ";
+          display.innerHTML = firstString;
+          return firstString;
+      }
+  }
+  const multiply = document.querySelector("#multiply");
+  multiply.addEventListener("click", multiplication);
+
+  function division() {
+      if (checkForOperator(firstString)) {
+          operate(firstString);
+          firstString += " / ";
+          display.innerHTML = firstString;
+          return firstString;
+      } else {
+          firstString += " / ";
+          display.innerHTML = firstString;
+          return firstString;
+      }
+  }
+const divide = document.querySelector("#divide")
+divide.addEventListener("click", division);
+
+function clear() {
+    firstString = 0;
+    display.innerHTML = firstString;
+    return firstString;
+}
+const clearBtn = document.querySelector("#clearBtn");
+clearBtn.addEventListener("click", clear);
+
+  // Need to get the display to work
+  
+</script>
+ 
+
+</body>
+
+</html>
